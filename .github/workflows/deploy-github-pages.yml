@@ -33,11 +33,11 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: "true"
-          GITHUB_PAGES_BASE_PATH: /convertanything-web
-          ADSENSE_PUBLISHER_ID: ${{ vars.ADSENSE_PUBLISHER_ID }}
-          NEXT_PUBLIC_ADSENSE_CLIENT: ${{ vars.NEXT_PUBLIC_ADSENSE_CLIENT }}
+          GITHUB_PAGES_BASE_PATH: /
+          ADSENSE_PUBLISHER_ID: pub-3761410214380843
+          NEXT_PUBLIC_ADSENSE_CLIENT: ca-pub-3761410214380843
           NEXT_PUBLIC_ADSENSE_SLOT: ${{ vars.NEXT_PUBLIC_ADSENSE_SLOT }}
-          NEXT_PUBLIC_SITE_URL: https://convertanything-web.github.io/convertanything-web
+          NEXT_PUBLIC_SITE_URL: https://convertanything-web.github.io
 
       - name: Publish gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
