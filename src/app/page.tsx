@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "@/components/AdSlot";
 import ConversionSearch from "@/components/ConversionSearch";
@@ -33,6 +34,12 @@ const faqs = [
   },
 ];
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -49,7 +56,8 @@ export default function Home() {
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "ConvertAnything",
+    name: "ConvertAnything Unit Converter",
+    alternateName: ["ConvertAnything", "Unit Converter"],
     url: absoluteUrl("/"),
     potentialAction: {
       "@type": "SearchAction",
@@ -63,7 +71,8 @@ export default function Home() {
   const appJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "ConvertAnything",
+    name: "ConvertAnything Unit Converter",
+    alternateName: "ConvertAnything",
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "Any",
     offers: {
@@ -83,7 +92,8 @@ export default function Home() {
         <p className="text-sm font-semibold uppercase tracking-wide text-teal-700">ConvertAnything</p>
         <h1 className="mt-4 text-5xl font-bold tracking-normal sm:text-7xl">Convert anything</h1>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-          Fast unit conversions with formulas, tables, reverse converters, and carefully curated value pages.
+          A fast unit converter for kg to lbs, cm to inches, Celsius to Fahrenheit, MB to GB, meters to feet,
+          and carefully curated value pages.
         </p>
         <div className="mt-9">
           <ConversionSearch />

@@ -16,12 +16,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://convertanything.example"),
   title: {
-    default: "ConvertAnything - Fast Unit Conversions",
+    default: "Unit Converter - Convert Anything Online",
     template: "%s | ConvertAnything",
   },
   description:
-    "ConvertAnything is a fast unit conversion engine for length, weight, temperature, area, volume, speed, time, digital storage, pressure, energy, power, and angles.",
-  keywords: ["unit converter", "conversion calculator", "kg to lbs", "cm to inches", "celsius to fahrenheit"],
+    "Free online unit converter for kg to lbs, cm to inches, Celsius to Fahrenheit, MB to GB, meters to feet, miles to km, and thousands of other conversions.",
+  keywords: [
+    "unit converter",
+    "online unit converter",
+    "conversion calculator",
+    "kg to lbs",
+    "lbs to kg",
+    "cm to inches",
+    "celsius to fahrenheit",
+    "meters to feet",
+    "mb to gb",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   applicationName: "ConvertAnything",
   authors: [{ name: "ConvertAnything" }],
   creator: "ConvertAnything",
@@ -39,16 +52,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "ConvertAnything",
-    description: "Fast, accurate unit conversions with formulas, tables, and related converters.",
+    title: "Unit Converter - Convert Anything Online",
+    description: "Convert length, weight, temperature, area, volume, speed, time, storage, pressure, energy, power, and angles.",
     url: "/",
     siteName: "ConvertAnything",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "ConvertAnything",
-    description: "Fast, accurate unit conversions with formulas, tables, and related converters.",
+    title: "Unit Converter - Convert Anything Online",
+    description: "Fast unit conversions with formulas, tables, reverse converters, and SEO-friendly value pages.",
   },
   ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? {
