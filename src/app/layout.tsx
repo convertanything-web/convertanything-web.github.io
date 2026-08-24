@@ -50,6 +50,13 @@ export const metadata: Metadata = {
     title: "ConvertAnything",
     description: "Fast, accurate unit conversions with formulas, tables, and related converters.",
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: {
+          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+        },
+      }
+    : {}),
 };
 
 export const viewport: Viewport = {

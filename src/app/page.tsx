@@ -53,7 +53,10 @@ export default function Home() {
     url: absoluteUrl("/"),
     potentialAction: {
       "@type": "SearchAction",
-      target: absoluteUrl("/convert/{search_term_string}"),
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: absoluteUrl("/search?q={search_term_string}"),
+      },
       "query-input": "required name=search_term_string",
     },
   };
